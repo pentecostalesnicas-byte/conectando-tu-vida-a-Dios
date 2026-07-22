@@ -1,47 +1,66 @@
-import Link from "next/link";
+import Image from "next/image";
+import { BookOpen, HeartHandshake } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section
-      className="relative flex min-h-[85vh] items-center bg-cover bg-center"
-      style={{
-        backgroundImage: "url('/images/hero/hero.jpg')",
-      }}
-    >
+    <section className="relative h-screen min-h-[700px] overflow-hidden">
+      {/* Imagen de fondo */}
+      <Image
+        src="/images/hero/hero.jpg"
+        alt="Conectando tu vida a Dios"
+        fill
+        priority
+        className="object-cover"
+      />
+
       {/* Capa oscura */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Contenido */}
-      <div className="relative mx-auto max-w-7xl px-6 py-24 text-white">
-        <div className="max-w-3xl">
-          <span className="rounded-full bg-amber-500/20 px-4 py-2 text-sm font-semibold text-amber-300">
-            Ministerio Digital Cristiano
-          </span>
+      <div className="relative z-10 flex h-full items-center">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="max-w-3xl">
 
-          <h1 className="mt-6 text-5xl font-extrabold leading-tight md:text-7xl">
-            Conectando tu Vida a Dios
-          </h1>
+            <span className="inline-block rounded-full bg-blue-600/30 px-5 py-2 text-sm font-semibold text-blue-100 backdrop-blur">
+              Ministerio Digital Cristiano
+            </span>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-200">
-            Un espacio para fortalecer tu fe mediante sermones, estudios
-            bíblicos, devocionales y recursos que te ayuden a crecer en tu
-            caminar con Jesucristo.
-          </p>
+            <h1 className="mt-6 text-5xl font-extrabold leading-tight text-white md:text-7xl">
+              Conectando
+              <br />
+              tu vida
+              <br />
+              <span className="text-amber-400">
+                a Dios
+              </span>
+            </h1>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/plan-de-salvacion"
-              className="rounded-lg bg-amber-500 px-6 py-3 font-semibold text-slate-900 transition hover:bg-amber-400"
-            >
-              Conoce el Plan de Salvación
-            </Link>
+            <p className="mt-8 max-w-2xl text-xl leading-9 text-gray-200">
+              Sermones, estudios bíblicos, devocionales,
+              consejería pastoral y recursos para ayudarte
+              a crecer espiritualmente cada día.
+            </p>
 
-            <Link
-              href="/sermones"
-              className="rounded-lg border border-white px-6 py-3 font-semibold transition hover:bg-white hover:text-slate-900"
-            >
-              Escuchar Sermones
-            </Link>
+            <div className="mt-10 flex flex-wrap gap-4">
+
+              <button className="flex items-center gap-2 rounded-xl bg-amber-500 px-7 py-4 font-semibold text-slate-900 transition hover:scale-105 hover:bg-amber-400">
+
+                <BookOpen size={22} />
+
+                Ver Sermones
+
+              </button>
+
+              <button className="flex items-center gap-2 rounded-xl border border-white px-7 py-4 font-semibold text-white transition hover:bg-white hover:text-slate-900">
+
+                <HeartHandshake size={22} />
+
+                Solicitar Oración
+
+              </button>
+
+            </div>
+
           </div>
         </div>
       </div>
