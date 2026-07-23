@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
 
 export const metadata: Metadata = {
-  title: "Conectando tu Vida a Dios",
+  title: "IPUN BETEL | Conectando tu Vida a Dios",
   description:
-    "Ministerio Digital Cristiano dedicado a compartir la Palabra de Dios.",
+    "Ministerio Digital Cristiano de la Iglesia Pentecostal Unida de Nicaragua - IPUN BETEL.",
 };
 
 export default function RootLayout({
@@ -17,8 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={cn("font-sans", geist.variable)}>
-      <body>{children}</body>
+    <html lang="es">
+      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
