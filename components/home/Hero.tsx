@@ -26,7 +26,7 @@ export default function Hero() {
           <div className="flex flex-col items-center justify-between gap-16 lg:flex-row">
 
             {/* Columna Izquierda */}
-            <div className="max-w-3xl">
+<div className="w-full max-w-3xl">
 
               {/* Badge */}
               <span className="inline-flex items-center rounded-full border border-blue-400/30 bg-blue-600/20 px-5 py-2 text-sm font-semibold tracking-wide text-blue-100 backdrop-blur">
@@ -91,7 +91,9 @@ export default function Hero() {
             </div>
 
             {/* Columna Derecha */}
-            <HeroCard />
+<div className="w-full max-w-[410px]">
+  <HeroCard />
+</div>
 
           </div>
 
