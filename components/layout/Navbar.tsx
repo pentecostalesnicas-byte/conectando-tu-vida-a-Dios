@@ -26,7 +26,7 @@ export default function Navbar() {
         >
           <Image
             src="/images/logo/logo-ipun-betel.png"
-            alt="IPUN BETEL"
+            alt="Sendero de Luz"
             width={72}
             height={72}
             priority
@@ -36,14 +36,14 @@ export default function Navbar() {
 
           <div className="leading-none -mt-1">
 
-            <h1 className="text-4xl font-black tracking-wide">
+            <h1 className="text-4xl font-black tracking-tight">
 
               <span className="text-white">
-                IPUN
+                Sendero
               </span>
 
               <span className="ml-2 text-amber-400">
-                BETEL
+                de Luz
               </span>
 
             </h1>
