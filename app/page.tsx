@@ -1,8 +1,8 @@
 import Navbar from "@/components/layout/Navbar";
 import { Hero } from "@/components/home-v2";
 import QuickLinks from "@/components/home/QuickLinks";
-import Mission from "@/components/home/Mission";
-import LatestContent from "@/components/home/LatestContent";
+import Identity from "@/components/home/Identity";
+import LatestResources from "@/components/home/LatestResources";
 
 export default function Home() {
   return (
@@ -12,8 +12,8 @@ export default function Home() {
       <main>
         <Hero />
         <QuickLinks />
-        <Mission />
-        <LatestContent />
+        <Identity />
+        <LatestResources />
       </main>
     </>
   );
