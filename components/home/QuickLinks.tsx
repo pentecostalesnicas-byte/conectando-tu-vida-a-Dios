@@ -4,6 +4,7 @@ import {
   HeartHandshake,
   Heart,
   Library,
+  Cross,
 } from "lucide-react";
 
 import FeatureCard from "@/components/ui/FeatureCard";
@@ -44,6 +45,13 @@ const features = [
       "Explora recursos cristianos, devocionales y material de crecimiento espiritual.",
     href: "/resources",
   },
+  {
+    icon: Cross,
+    title: "Plan de Salvación",
+    description:
+      "No estás aquí por casualidad. Jesucristo te ama, quiere perdonar tus pecados y darte una vida nueva. Descubre el plan de salvación y responde hoy a Su llamado.",
+    href: "/salvation",
+  },
 ];
 
 export default function QuickLinks() {
@@ -62,16 +70,17 @@ export default function QuickLinks() {
           </div>
 
           <h2 className="mt-6 mb-8 text-center text-5xl font-bold tracking-tight text-white">
-  Crece en tu relación con Dios
-</h2>
+            Crece en tu relación con Dios
+          </h2>
 
-         <div className="mt-6 flex justify-center">
-  <p className="max-w-3xl text-center text-lg leading-9 text-slate-300">
-    Explora estudios bíblicos, predicaciones y recursos diseñados para ayudarte
-    a conocer más a Jesucristo, fortalecer tu fe y caminar cada día conforme a
-    Su Palabra.
-  </p>
-</div>
+          <div className="mt-6 flex justify-center">
+            <p className="max-w-3xl text-center text-lg leading-9 text-slate-300">
+              Explora estudios bíblicos, predicaciones y recursos diseñados para ayudarte
+              a conocer más a Jesucristo, fortalecer tu fe y caminar cada día conforme a
+              Su Palabra.
+            </p>
+          </div>
+
         </div>
 
         {/* ================= Tarjetas ================= */}

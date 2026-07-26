@@ -3,6 +3,7 @@ import { Hero } from "@/components/home-v2";
 import QuickLinks from "@/components/home/QuickLinks";
 import Identity from "@/components/home/Identity";
 import LatestResources from "@/components/home/LatestResources";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
         <Identity />
         <LatestResources />
       </main>
+
+      <Footer />
     </>
   );
 }
