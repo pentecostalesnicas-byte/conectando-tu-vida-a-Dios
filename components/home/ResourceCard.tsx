@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Mic2,
+  BookOpen,
+  Video,
+  BookMarked,
+  HeartHandshake,
+  Library,
+} from "lucide-react";
 
 interface ResourceCardProps {
   image: string;
@@ -19,6 +27,44 @@ export default function ResourceCard({
   href,
   date,
 }: ResourceCardProps) {
+  const categories = {
+    "SERMÓN": {
+      color: "bg-violet-700 border-violet-500 text-white",
+      icon: <Mic2 size={14} />,
+    },
+
+    "ESTUDIO BÍBLICO": {
+      color: "bg-blue-700 border-blue-500 text-white",
+      icon: <BookOpen size={14} />,
+    },
+
+    VIDEO: {
+      color: "bg-red-700 border-red-500 text-white",
+      icon: <Video size={14} />,
+    },
+
+    DEVOCIONAL: {
+      color: "bg-green-700 border-green-500 text-white",
+      icon: <BookMarked size={14} />,
+    },
+
+    TESTIMONIO: {
+      color: "bg-pink-700 border-pink-500 text-white",
+      icon: <HeartHandshake size={14} />,
+    },
+
+    BIBLIOTECA: {
+      color: "bg-amber-700 border-amber-500 text-white",
+      icon: <Library size={14} />,
+    },
+  };
+
+  const current =
+    categories[category as keyof typeof categories] ?? {
+      color: "bg-slate-700 border-slate-500 text-white",
+      icon: null,
+    };
+
   return (
     <Link
       href={href}
@@ -37,64 +83,60 @@ export default function ResourceCard({
         hover:shadow-[0_35px_80px_rgba(245,158,11,.18)]
       "
     >
-      {/* ================= Imagen ================= */}
+      {/* Imagen */}
 
       <div className="p-2 pb-0">
         <div className="relative aspect-[16/9] overflow-hidden rounded-[24px]">
+
           <Image
             src={image}
             alt={title}
             fill
-            sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+            sizes="(max-width:768px)100vw,(max-width:1200px)50vw,33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-110"
           />
 
-          {/* Overlay */}
-
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/20 to-transparent" />
-
-          {/* Brillo */}
 
           <div className="absolute inset-0 bg-gradient-to-br from-amber-400/0 via-amber-300/0 to-white/0 opacity-0 transition duration-500 group-hover:opacity-20" />
 
-          {/* Etiqueta */}
+          {/* Categoría */}
 
           <span
-            className="
+            className={`
               absolute
-              left-6
-              top-6
+              left-5
+              top-5
+              inline-flex
+              items-center
+              gap-2
               rounded-full
               border
-              border-white/20
-              bg-amber-500/95
-              px-4
-              py-2
-              text-xs
-              font-bold
+              px-5
+              py-2.5
+              text-sm
+              font-semibold
               uppercase
-              tracking-[0.15em]
-              text-white
+              tracking-[0.12em]
               shadow-xl
               backdrop-blur
-            "
+              ${current.color}
+            `}
           >
-            RECIENTE
+            {current.icon}
+            {category}
           </span>
+
         </div>
       </div>
 
-      {/* ================= Contenido ================= */}
+      {/* Contenido */}
 
       <div className="px-8 pt-10 pb-8">
 
-        {/* Fecha */}
-
         <span className="block text-center text-sm font-medium tracking-wide text-slate-500">
-          Recientemente actualizado
+          Publicado el {date}
         </span>
-
-        {/* Título */}
 
         <h3
           className="
@@ -112,11 +154,7 @@ export default function ResourceCard({
           {title}
         </h3>
 
-        {/* Separador */}
-
         <div className="mx-auto mt-6 mb-7 h-px w-24 bg-gradient-to-r from-transparent via-amber-300 to-transparent" />
-
-        {/* Acción */}
 
         <div className="flex justify-center">
 
@@ -149,6 +187,7 @@ export default function ResourceCard({
         </div>
 
       </div>
+
     </Link>
   );
 }

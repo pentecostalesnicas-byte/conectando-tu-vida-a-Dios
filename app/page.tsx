@@ -1,5 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
-import { Hero } from "@/components/home-v2";
+import { Hero } from "@/components/home";
 import QuickLinks from "@/components/home/QuickLinks";
 import Identity from "@/components/home/Identity";
 import LatestResources from "@/components/home/LatestResources";

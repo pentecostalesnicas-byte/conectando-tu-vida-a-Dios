@@ -3,7 +3,7 @@ import ResourceCard from "./ResourceCard";
 const resources = [
   {
     image: "/images/resources/sermon-1.jpg",
-    category: "RECIENTE",
+    category: "SERMÓN",
     title: "Nunca es tarde para volver a Dios",
     description:
       "Un mensaje de esperanza para quienes desean restaurar su comunión con Dios.",
@@ -12,7 +12,7 @@ const resources = [
   },
   {
     image: "/images/resources/study-1.jpg",
-    category: "RECIENTE",
+    category: "ESTUDIO BÍBLICO",
     title: "¿Quién es Jesucristo según la Biblia?",
     description:
       "Un estudio fundamentado en las Escrituras acerca de la identidad de Jesucristo.",
@@ -21,7 +21,7 @@ const resources = [
   },
   {
     image: "/images/resources/video-1.jpg",
-    category: "RECIENTE",
+    category: "VIDEO",
     title: "Cómo fortalecer tu vida de oración",
     description:
       "Principios prácticos para desarrollar una vida constante de oración.",
@@ -63,15 +63,14 @@ export default function LatestResources() {
           <p
             className="
               mt-8
-              max-w-2xl
+              max-w-3xl
               text-center
               text-lg
               leading-8
               text-slate-300
             "
           >
-            Descubre los últimos sermones, estudios bíblicos y videos
-            incorporados al ministerio.
+            Descubre los sermones, estudios bíblicos y videos más recientes incorporados al ministerio.
           </p>
 
         </div>
