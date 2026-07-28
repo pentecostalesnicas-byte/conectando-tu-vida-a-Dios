@@ -1,12 +1,12 @@
 export default function AdminPage() {
   return (
-    <div className="space-y-4">
-      <h1 className="text-4xl font-bold text-slate-800">
-        BETEL ADN
+    <div className="rounded-3xl border border-slate-200 bg-white p-10 shadow-sm">
+      <h1 className="text-3xl font-bold text-slate-800">
+        Bienvenido al Panel Administrativo
       </h1>
 
-      <p className="text-slate-600">
-        Centro de Operaciones Ministeriales
+      <p className="mt-3 text-slate-600">
+        Estamos construyendo la nueva plataforma ministerial BETEL ADN.
       </p>
     </div>
   );

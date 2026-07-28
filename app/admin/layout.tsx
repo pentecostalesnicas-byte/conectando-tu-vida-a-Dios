@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import AdminLayout from "@/components/admin/layout/AdminLayout";
+import DashboardShell from "@/components/admin/layout/DashboardShell";
 
 export const metadata: Metadata = {
-  title: "BETEL ADN | Centro de Operaciones Ministeriales",
-  description:
-    "Plataforma administrativa de BETEL ADN para la gestión integral del ministerio.",
+  title: "BETEL ADN | Panel Administrativo",
+  description: "Panel administrativo de BETEL ADN",
 };
 
-export default function Layout({
+export default function AdminLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  return <AdminLayout>{children}</AdminLayout>;
+}) {
+  return <DashboardShell>{children}</DashboardShell>;
 }
