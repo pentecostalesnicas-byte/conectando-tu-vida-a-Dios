@@ -1,6 +1,6 @@
 "use client";
 
-import { navigation } from "./navigation";
+import { navigation } from "../../../config/navigation";
 import SidebarItem from "./SidebarItem";
 
 export default function SidebarNav() {

@@ -1,13 +1,33 @@
-export default function AdminPage() {
-  return (
-    <div className="rounded-3xl border border-slate-200 bg-white p-10 shadow-sm">
-      <h1 className="text-3xl font-bold text-slate-800">
-        Bienvenido al Panel Administrativo
-      </h1>
+import DashboardOverview from "@/components/admin/dashboard/DashboardOverview";
+import DashboardStats from "@/components/admin/dashboard/DashboardStats";
 
-      <p className="mt-3 text-slate-600">
-        Estamos construyendo la nueva plataforma ministerial BETEL ADN.
-      </p>
-    </div>
+import {
+  PageContainer,
+  PageHeader,
+  PageSection,
+} from "@/components/ui";
+
+export default function AdminDashboardPage() {
+  return (
+    <PageContainer>
+      <PageHeader
+        title="Dashboard"
+        description="Centro de operaciones de BETEL ADN WEB."
+      />
+
+      <PageSection
+        title="Resumen General"
+        description="Estado actual del ministerio."
+      >
+        <DashboardStats />
+      </PageSection>
+
+      <PageSection
+        title="Actividad"
+        description="Información general del sistema."
+      >
+        <DashboardOverview />
+      </PageSection>
+    </PageContainer>
   );
 }
