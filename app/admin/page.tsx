@@ -1,5 +1,6 @@
 import DashboardOverview from "@/components/admin/dashboard/DashboardOverview";
 import DashboardStats from "@/components/admin/dashboard/DashboardStats";
+import QuickActions from "@/components/admin/dashboard/QuickActions";
 
 import {
   PageContainer,
@@ -23,7 +24,14 @@ export default function AdminDashboardPage() {
       </PageSection>
 
       <PageSection
-        title="Actividad"
+        title="Accesos rápidos"
+        description="Acciones frecuentes del administrador."
+      >
+        <QuickActions />
+      </PageSection>
+
+      <PageSection
+        title="Actividad reciente"
         description="Información general del sistema."
       >
         <DashboardOverview />

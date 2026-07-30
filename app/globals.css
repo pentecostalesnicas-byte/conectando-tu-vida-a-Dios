@@ -209,3 +209,53 @@ html{
     @apply font-sans;
   }
 }
+/* ==========================================================
+   BETEL ADN ADMIN DESIGN SYSTEM
+========================================================== */
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: Inter, sans-serif;
+}
+
+.admin-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  box-shadow:
+    0 1px 2px rgba(15,23,42,.04),
+    0 10px 30px rgba(15,23,42,.05);
+    transition: all .25s ease;
+}
+
+.admin-card:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 40px rgba(15,23,42,.08);
+}
+
+.admin-title{
+  font-size:1.6rem;
+  font-weight:700;
+  color:#0f172a;
+}
+
+.admin-subtitle{
+  color:#64748b;
+  font-size:.95rem;
+}
+
+.admin-section{
+  margin-top:2rem;
+}
+
+.admin-stat{
+  font-size:2.4rem;
+  font-weight:800;
+  line-height:1;
+}
+
+.admin-muted{
+  color:#64748b;
+}

@@ -1,34 +1,42 @@
+import PrayerRequests from "./PrayerRequests";
+import RecentActivity from "./RecentActivity";
+
 export default function DashboardOverview() {
   return (
-    <section className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-      <div className="flex items-center justify-between">
-        <div>
+    <div className="grid gap-6 xl:grid-cols-[1.5fr_1fr]">
+      <div className="space-y-6">
+        <section className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
           <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-            Resumen
+            Dashboard Ejecutivo
           </p>
 
           <h2 className="mt-2 text-2xl font-bold text-slate-900">
-            Estadísticas del sitio
+            Centro de Operaciones Ministeriales
           </h2>
 
-          <p className="mt-2 text-slate-500">
-            Próximamente podrás visualizar aquí el comportamiento de tu
-            ministerio digital mediante gráficos y métricas en tiempo real.
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-8 flex h-80 items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50">
-        <div className="text-center">
-          <p className="text-lg font-semibold text-slate-700">
-            Área reservada para gráficos
+          <p className="mt-3 max-w-2xl text-slate-500">
+            Desde este panel podrás administrar todo el ecosistema BETEL ADN,
+            visualizar estadísticas, monitorear la actividad del ministerio y
+            gestionar el contenido del sitio web.
           </p>
 
-          <p className="mt-2 text-sm text-slate-500">
-            Visitas • Recursos • Predicaciones • Eventos
-          </p>
-        </div>
+          <div className="mt-8 flex h-80 items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50">
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-slate-800">
+                Dashboard Analytics
+              </h3>
+
+              <p className="mt-3 text-slate-500">
+                Google Analytics · Donaciones · Sermones · Estudios · Eventos
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <PrayerRequests />
       </div>
-    </section>
+
+      <RecentActivity />
+    </div>
   );
 }
